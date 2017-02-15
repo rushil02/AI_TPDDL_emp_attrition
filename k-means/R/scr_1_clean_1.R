@@ -19,4 +19,5 @@ data_main <- read_excel(paste(dirname(dirname(getwd())),'HR-Employee-Attrition.x
 #false_data = matrix(11:600, ncol = 2) 
 
 cleaned_data<-t(apply(data_main, 1, clean_qual_data))
-plot(cleaned_data)
+
+cleaned_data <- subset(cleaned_data, select=-c(EmployeeCount, EmployeeNumber, Over18, StandardHours))
