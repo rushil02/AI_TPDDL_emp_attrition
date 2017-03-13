@@ -14,7 +14,7 @@ clean_qual_data_mod <- function(x){
   return(x)
 }
 
-cleaned_data_te <- subset(data_main, select=-c(EmployeeCount, EmployeeNumber, Over18, StandardHours))
+cleaned_data_te <- subset(data_main, select=-c(EmployeeCount, EmployeeNumber, Over18))
 
 i = 1
 for(xx in cleaned_data_te$Attrition){
